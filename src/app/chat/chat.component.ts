@@ -14,7 +14,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class ChatComponent implements OnInit {
   @ViewChild('chat', { static: true }) 
   public chat: any;
-  
+
   private stompClient?: any;
   chatForm: FormGroup;
   public users: any;
