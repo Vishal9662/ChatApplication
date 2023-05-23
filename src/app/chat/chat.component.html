@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Application</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="sender">
+            <div class="user-list-header text-center">Active User</div>
+            <p class="active-sender">{{ username }}</p>
+        </div>
+        <div class="chat">
+            <div>
+                <div class="text-center chat-header">
+                    <p>Active Chat : {{ activeuser }}</p>
+                </div>
+                <div class="chat-message" #chat></div>
+                <div class="send-message">
+                    <form [formGroup]="chatForm" enctype="multipart/form-data" (ngSubmit)="sendMessage()">
+                        <input type="text" class="message-field" formControlName="message" placeholder="Message..." />
+                        <button class="send-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="user-list">
+                <div class="user-list-header text-center">Users</div>
+                <div>
+                    <button type="button" class="chat-button" *ngFor="let user of users" (click)="stratChat(user)">
+                        {{ user }}
+                    </button>
+                </div>
+            </div>
+
+            <!-- <div class="group-chat">
+                <div class="user-list-header text-center">Group Chat</div>
+                <button type="button" class="chat-button" (click)="stratGroupChat('group')">
+                    Start group chat
+                </button>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+
+</html>

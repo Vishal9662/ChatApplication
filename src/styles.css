@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.chat-message {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    overflow: auto;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.left {
+    background-color: lightblue;
+    align-self: flex-start;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.right {
+    background-color: #dc3545;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.user-name {
+    font-size: 15px;
+    align-self: flex-end;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    order: 1;
+}
